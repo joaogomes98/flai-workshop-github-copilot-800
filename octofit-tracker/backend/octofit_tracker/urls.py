@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .views import (
-    api_root,
     UserViewSet,
     TeamViewSet,
     ActivityViewSet,
@@ -33,6 +34,17 @@ if codespace_name:
 else:
     base_url = "http://localhost:8000"
 
+@api_view(['GET'])
+def api_root_custom(request, format=None):
+    """API root endpoint with codespace-aware URLs"""
+    return Response({
+        'users': f"{base_url}/api/users/",
+        'teams': f"{base_url}/api/teams/",
+        'activities': f"{base_url}/api/activities/",
+        'leaderboard': f"{base_url}/api/leaderboard/",
+        'workouts': f"{base_url}/api/workouts/",
+    })
+
 # Create router and register viewsets
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='user')
@@ -43,7 +55,7 @@ router.register(r'workouts', WorkoutViewSet, basename='workout')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', api_root, name='api-root'),
-    path('api/', api_root, name='api-root'),
+    path('', api_root_custom, name='api-root'),
+    path('api/', api_root_custom, name='api-root'),
     path('api/', include(router.urls)),
 ]
