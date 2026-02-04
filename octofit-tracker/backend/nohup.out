@@ -1,0 +1,7 @@
+Watching for file changes with StatReloader
+[04/Feb/2026 16:48:45] "GET /api/users/ HTTP/1.1" 200 1988
+[04/Feb/2026 16:48:53] "HEAD /api/users/ HTTP/1.1" 200 1988
+[04/Feb/2026 16:49:12] "GET /api/activities/ HTTP/1.1" 200 25209
+[04/Feb/2026 16:49:13] "GET /api/activities/ HTTP/1.1" 200 25209
+[04/Feb/2026 16:49:14] "GET /api/users/ HTTP/1.1" 200 1988
+[04/Feb/2026 16:49:15] "GET /api/users/ HTTP/1.1" 200 1988
