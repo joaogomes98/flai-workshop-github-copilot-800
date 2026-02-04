@@ -1,0 +1,278 @@
+/* OctoFit Tracker Custom Styles */
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+}
+
+/* Navigation Styles */
+.navbar {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: rgba(255,255,255,0.85) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link:active,
+.nav-link.active {
+  background-color: rgba(255,255,255,0.2);
+  color: #fff !important;
+}
+
+/* Content Container */
+.content-wrapper {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* Page Headings */
+h1 {
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2a5298;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+h3, h4 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h5, h6 {
+  color: #764ba2;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Table Styles */
+.table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table thead {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+  color: white;
+}
+
+.table thead th {
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 1rem;
+  color: #fff;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(90deg, #f0f4ff 0%, #e8f0fe 100%);
+  transform: scale(1.01);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  color: #2a5298;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.75rem 0;
+  background: transparent;
+}
+
+.list-group-item strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.card-body h3 {
+  font-size: 2rem;
+  color: #7e22ce;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.5);
+  color: #fff;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #1e4080 0%, #152c5a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(42, 82, 152, 0.5);
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.loading-container p {
+  font-size: 1.2rem;
+  color: #667eea;
+}
+
+.error-container p {
+  font-size: 1.2rem;
+}
+
+/* Welcome/Home Page */
+.welcome-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  text-align: center;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.welcome-section h1 {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.welcome-section .lead {
+  font-size: 1.3rem;
+  color: #2a5298;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.welcome-section .text-muted {
+  color: #667eea !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+  
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+}
